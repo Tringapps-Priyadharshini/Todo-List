@@ -192,6 +192,7 @@ function displayfirst() {
         if (userdetails.todolist[i].completed == 'yes') {
             document.getElementById(li.id).style.textDecoration = "line-through";
             document.getElementById(li.id).style.background = "#ABB2B9";
+            removeid.push(li.id);
         }
         li.addEventListener('click', function($event) {
 
