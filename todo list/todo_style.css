@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: white;
+    border: 5px solid #641E16;
+    margin-left: 430px;
+    margin-right: 480px;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+input {
+    position: relative;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 10px;
+    width: 80%;
+    border-radius: 10px;
+}
+
+p {
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#add {
+    position: relative;
+    float: right;
+    font-size: 16px;
+    background-color: #0d75ec;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    width: 10%;
+    height: 45px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+#clear,
+#empty,
+#save,
+#show,
+#logout {
+    position: relative;
+    float: left;
+    font-size: 16px;
+    background-color: #0d75ec;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    width: 30%;
+    height: 45px;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-left: 8px;
+}
+
+#savedlist {
+    position: relative;
+    float: left;
+    font-size: 16px;
+    background-color: #0d75ec;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    width: 30%;
+    height: 45px;
+    border-radius: 10px;
+    margin-left: 220px;
+    margin-top: 10px;
+}
+
+ul li {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    border: 1px solid;
+    border-radius: 5px;
+    position: relative;
+    background-color: crimson;
+    padding: 20px;
+    list-style-type: none;
+    border-color: #641E16;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 10px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+}
+
+ul li:hover {
+    background-color: #FFBF00;
+}
+
+#disp {
+    background-color: aqua;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="todo_style.css">
+</head>
+
+<body bgcolor="blue">
+    <div class="container">
+        <p>My Todo List</p><br>
+        <input type="text" id="task" placeholder="task to be done">
+        <button type="button" id="add" onclick="add()">+</button><br><br>
+        <button type="button" id="clear" onclick="clear_complete()">clear completed task</button>
+        <button type="button" id="empty" onclick="clearall()">Empty List</button>
+        <button type="button" id="logout" onclick="logout()">Logout</button><br><br><br><br>
+        <br>
+        <ul id="mylist">
+        </ul>
+    </div>
+
+    <script src="todo.js"></script>
+</body>
+
+</html>

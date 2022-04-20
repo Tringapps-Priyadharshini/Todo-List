@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: cursive, Times New Roman;
+    font-size: 30px;
+}
+
+.register_page {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-left: 430px;
+    margin-right: 480px;
+    box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    border: none;
+    margin-bottom: 19px;
+    border-bottom: 2px solid white;
+    width: 90%;
+    outline: none;
+    background: transparent;
+    color: antiquewhite;
+    font-size: 19px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #FFBF00;
+    border-radius: 40px;
+    font-family: Cursive, Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    color: red;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+#reg {
+    text-align: center;
+    background-color: #FFBF00;
+    color: red;
+    border-radius: 30px;
+}
