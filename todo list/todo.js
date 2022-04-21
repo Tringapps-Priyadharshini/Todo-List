@@ -203,9 +203,9 @@ function displayfirst() {
             console.log("find ", find);
             console.log("onclick id ", $event.target.id);
 
-            for (var i = 0; i < userdetails.todolist.length; i++) {
-                if (userdetails.todolist[i].task == find && userdetails.todolist[i].completed == "no") {
-                    userdetails.todolist[i].completed = "yes";
+            for(let todolist of userdetails.todolist){
+                if (todolist.task == find && todolist.completed == "no") {
+                    todolist.completed = "yes";
                     save();
                     break;
                 }
