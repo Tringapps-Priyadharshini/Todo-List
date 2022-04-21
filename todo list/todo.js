@@ -151,11 +151,11 @@ function clearall() {
  * This method is used to clear the completed task
  */
 function clear_complete() {
-    for (var i = 0; i < removeid.length; i++) {
-        console.log("array",removeid[i]);
-        if (document.getElementById(removeid[i])) {
-            var getid = document.getElementById('mylist').removeChild(document.getElementById(removeid[i]));
-            console.log(removeid[i]);
+    for(let removeId of removeid){
+        console.log("array",removeId);
+        if (document.getElementById(removeId)) {
+            var getid = document.getElementById('mylist').removeChild(document.getElementById(removeId));
+            console.log(removeId);
             var getvalue = getid.innerText;
             console.log("getid ", getid);
             console.log("getvalue ", getvalue);
