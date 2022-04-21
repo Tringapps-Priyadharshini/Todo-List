@@ -51,8 +51,6 @@ p {
 
 #clear,
 #empty,
-#save,
-#show,
 #logout {
     position: relative;
     float: left;
@@ -68,27 +66,9 @@ p {
     margin-left: 8px;
 }
 
-#savedlist {
-    position: relative;
-    float: left;
-    font-size: 16px;
-    background-color: #0d75ec;
-    border: none;
-    color: #ffffff;
-    cursor: pointer;
-    width: 30%;
-    height: 45px;
-    border-radius: 10px;
-    margin-left: 220px;
-    margin-top: 10px;
-}
-
 ul li {
     margin: 0;
     padding: 0;
-}
-
-ul li {
     border: 1px solid;
     border-radius: 5px;
     position: relative;
