@@ -215,7 +215,7 @@ function displayfirst() {
             var getid = document.getElementById($event.target.id);
             var getval = getid.innerText;
             console.log("remove value ", getval);
-            for (var j = 0; i < userdetails.todolist.length; i++) {
+            for (var j = 0; j < userdetails.todolist.length; j++) {
                 if (userdetails.todolist[j].task == getval) {
                     console.log(userdetails.todolist[j].task);
                     userdetails.todolist.splice(j, 1);
