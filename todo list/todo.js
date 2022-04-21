@@ -215,10 +215,10 @@ function displayfirst() {
             var getid = document.getElementById($event.target.id);
             var getval = getid.innerText;
             console.log("remove value ", getval);
-            for (i = 0; i < userdetails.todolist.length; i++) {
-                if (userdetails.todolist[i].task == getval) {
-                    console.log(userdetails.todolist[i].task);
-                    userdetails.todolist.splice(i, 1);
+            for (var j = 0; i < userdetails.todolist.length; i++) {
+                if (userdetails.todolist[j].task == getval) {
+                    console.log(userdetails.todolist[j].task);
+                    userdetails.todolist.splice(j, 1);
                     save();
                     break;
                 }
