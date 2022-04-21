@@ -40,3 +40,6 @@ input {
     outline: none;
     background: transparent;
 }
+p{
+    text-align: center;
+}
