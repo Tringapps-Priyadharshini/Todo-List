@@ -72,46 +72,7 @@ function show() {
     li.innerText = inputvalue;
     document.getElementById('mylist').appendChild(li);
     li.id = getRandomString(6);
-
-    /**
-     * When the user single clicks on task then it displays that it will be completed
-     * by changing background color and text decoration ( line - through )
-     */
-    li.addEventListener('click', function($event) {
-
-        document.getElementById($event.target.id).style.textDecoration = "line-through";
-        document.getElementById($event.target.id).style.background = "#ABB2B9";
-        removeid.push($event.target.id);
-        console.log("onclick text ", document.getElementById($event.target.id).innerText);
-        var find = document.getElementById($event.target.id).innerText;
-        console.log("find ", find);
-        console.log("onclick id ", $event.target.id);
-        for(let todolist of userdetails.todolist){
-            if (todolist.task == find && todolist.completed == "no") {
-                todolist.completed = "yes";
-                save();
-                break;
-            }
-        }
-    });
-
-    /**
-     * when user double clicks the task then it delete from the tasks
-     */
-    li.addEventListener('dblclick', function($event) {
-        var getid = document.getElementById($event.target.id);
-        var getval = getid.innerText;
-        console.log("remove value ", getval);
-        for (var i = 0; i < userdetails.todolist.length; i++) {
-            if (userdetails.todolist[i].task == getval) {
-                console.log(userdetails.todolist[i].task);
-                userdetails.todolist.splice(i, 1);
-                save();
-                break;
-            }
-        }
-        document.getElementById($event.target.id).remove();
-    });
+    click();
     save();
 }
 
@@ -120,6 +81,7 @@ function show() {
  * This method is used to save all the modifications in localStorage
  */
 function save() {
+
     for (let signupdetails of signup.det) {
         if (signupdetails.mail == signin.mail && signupdetails.pwd == signin.pwd) {
             signupdetails.todolist = userdetails.todolist;
@@ -159,6 +121,7 @@ function clear_complete() {
 
         }
     }
+
     var filteringtodolist = userdetails.todolist.filter(completetask => completetask.completed == 'no');
     userdetails.todolist = filteringtodolist;
     save();
@@ -190,39 +153,52 @@ function displayfirst() {
             document.getElementById(li.id).style.background = "#ABB2B9";
             removeid.push(li.id);
         }
-        li.addEventListener('click', function($event) {
+        click();
 
-            document.getElementById($event.target.id).style.textDecoration = "line-through";
-            document.getElementById($event.target.id).style.background = "#ABB2B9";
-            removeid.push($event.target.id);
-            console.log("onclick text ", document.getElementById($event.target.id).innerText);
-            var find = document.getElementById($event.target.id).innerText;
-            console.log("find ", find);
-            console.log("onclick id ", $event.target.id);
-
-            for(let todolist of userdetails.todolist){
-                if (todolist.task == find && todolist.completed == "no") {
-                    todolist.completed = "yes";
-                    save();
-                    break;
-                }
-            }
-        });
-        li.addEventListener('dblclick', function($event) {
-            var getid = document.getElementById($event.target.id);
-            var getval = getid.innerText;
-            console.log("remove value ", getval);
-            for (var j = 0; j < userdetails.todolist.length; j++) {
-                if (userdetails.todolist[j].task == getval) {
-                    console.log(userdetails.todolist[j].task);
-                    userdetails.todolist.splice(j, 1);
-                    save();
-                    break;
-                }
-            }
-            document.getElementById($event.target.id).remove();
-        });
     }
-
     save();
+}
+
+function click(){
+    /**
+     * When the user single clicks on task then it displays that it will be completed
+     * by changing background color and text decoration ( line - through )
+     */
+    li.addEventListener('click', function($event) {
+
+        document.getElementById($event.target.id).style.textDecoration = "line-through";
+        document.getElementById($event.target.id).style.background = "#ABB2B9";
+        removeid.push($event.target.id);
+        console.log("onclick text ", document.getElementById($event.target.id).innerText);
+        var find = document.getElementById($event.target.id).innerText;
+        console.log("find ", find);
+        console.log("onclick id ", $event.target.id);
+
+        for(let todolist of userdetails.todolist){
+            if (todolist.task == find && todolist.completed == "no") {
+                todolist.completed = "yes";
+                save();
+                break;
+            }
+        }
+    });
+
+    /**
+     * when user double clicks the task then it delete from the tasks
+     */
+    li.addEventListener('dblclick', function($event) {
+        var getid = document.getElementById($event.target.id);
+        var getval = getid.innerText;
+        console.log("remove value ", getval);
+        for (var i = 0; i < userdetails.todolist.length; i++) {
+            if (userdetails.todolist[i].task == getval) {
+                console.log(userdetails.todolist[i].task);
+                userdetails.todolist.splice(i, 1);
+                save();
+                break;
+            }
+        }
+        document.getElementById($event.target.id).remove();
+    });
+
 }
