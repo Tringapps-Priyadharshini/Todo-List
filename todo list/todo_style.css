@@ -3,6 +3,9 @@
     padding: 0;
 }
 
+body{
+    background-color:blue;
+}
 .container {
     background-color: white;
     border: 5px solid #641E16;
