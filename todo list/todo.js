@@ -121,8 +121,8 @@ function show() {
  */
 function save() {
 
-    var signin = JSON.parse(sessionStorage.getItem('login'));
-    var signup = JSON.parse(localStorage['signup']);
+    signin = JSON.parse(sessionStorage.getItem('login'));
+    signup = JSON.parse(localStorage['signup']);
     for (let signupdetails of signup.det) {
         if (signupdetails.mail == signin.mail && signupdetails.pwd == signin.pwd) {
             signupdetails.todolist = userdetails.todolist;
